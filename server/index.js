@@ -10,7 +10,7 @@ app.use(express.json());
 
 dot.config().parsed;
 
-mongoose.connect(process.env.DB_URL);
+mongoose.connect(process.env.DB_URL); //mongoDB Atlas URL in ENV File
 
 app.get("/get", (req, res) => {
   TodoModel.find()
